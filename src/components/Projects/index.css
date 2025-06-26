@@ -1,0 +1,14 @@
+.projects-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+.projects-section h2 {
+  color: #61dafb;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.projects-section p {
+  color: #ccc;
+  font-size: 1.1rem;
+} 
