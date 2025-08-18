@@ -4,7 +4,7 @@
   border-bottom: 1px solid #333;
 }
 .experience-section h2 {
-  color: #61dafb;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 2rem;
 }
