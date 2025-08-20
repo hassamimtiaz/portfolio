@@ -25,15 +25,11 @@
   padding-bottom: var(--spacing-sm);
 }
 
-.about-section h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  border-radius: 2px;
+/* Remove decorative underlines for About headings */
+#about h2::after,
+#about .about-section h3::after {
+  content: none;
+  display: none;
 }
 
 .about-section p {
