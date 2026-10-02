@@ -1,0 +1,65 @@
+.resume__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: end;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 55%),
+    linear-gradient(180deg, #edf3f8, #e4ecf4);
+  border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.resume__copy h2 {
+  margin: 0.2rem 0 0;
+}
+
+.resume__copy .btn {
+  margin-top: 1.35rem;
+}
+
+.resume__aside {
+  border-left: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  padding-left: clamp(1rem, 3vw, 1.75rem);
+}
+
+.resume__label {
+  margin: 0 0 0.55rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.resume__aside h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.resume__aside p {
+  margin: 0.4rem 0 0;
+  color: var(--ink-soft);
+}
+
+.resume__period {
+  font-size: 0.92rem;
+  color: var(--ink-muted) !important;
+}
+
+@media (max-width: 760px) {
+  .resume__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__aside {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+}

@@ -1,0 +1,123 @@
+.contact__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+.contact__form {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--ink) 3.5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.contact__field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact__field label {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: var(--ink-soft);
+}
+
+.contact__field input,
+.contact__field textarea {
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0.75rem 0.85rem;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact__field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.contact__aside {
+  padding: 1.5rem;
+  background: #0e1621;
+  color: #d5dee8;
+}
+
+.contact__aside-label {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #8ea3b8;
+}
+
+.contact__channels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__channels li {
+  display: grid;
+  gap: 0.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid color-mix(in srgb, #fff 10%, transparent);
+}
+
+.contact__channels li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact__channels span,
+.contact__channel-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8ea3b8;
+  font-weight: 650;
+}
+
+.contact__channel-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact__channels a {
+  color: #f5f8fc;
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.contact__channels a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+  }
+}

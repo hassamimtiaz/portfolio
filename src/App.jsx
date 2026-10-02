@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Hero from './components/Hero/index.jsx'
-import About from './components/About'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import './index.css';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <>
-      <nav className="nav-header">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div className="app">
+      <Navbar
+        menuOpen={menuOpen}
+        onToggle={() => setMenuOpen((open) => !open)}
+        onNavigate={() => setMenuOpen(false)}
+      />
       <main>
         <Hero />
-        <About />
+        <Services />
         <Experience />
-        <Skills />
         <Projects />
+        <Skills />
+        <Resume />
         <Contact />
       </main>
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
